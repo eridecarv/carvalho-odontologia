@@ -1,0 +1,529 @@
+---
+import "./consultorio.css";
+---
+
+<!--
+  ESTRUTURA DA PÁGINA
+
+  1. Faixa superior / announcement
+  2. Header
+  3. Hero
+  4. marquee
+  5. Sobre
+  6. Especialidades
+  7. Tratamentos
+  8. Depoimentos
+  9. Contato
+  10. Footer
+-->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/logo-redonda-favicon.png" />
+    <title>Consultório</title>
+  </head>
+
+  <body>
+    <!-- 1. FAIXA SUPERIOR / ANNOUNCEMENT -->
+    <section class="carvalho-announcement">
+      <div class="carvalho-container">
+        <p class="carvalho-announcement__text">
+          Cuidado e respeito, do início ao fim, aqui no Éden.
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. HEADER -->
+    <header class="carvalho-header">
+      <div class="carvalho-container">
+        <div class="carvalho-header__inner">
+          <a
+            href="/"
+            class="carvalho-header__logo-link"
+            aria-label="Carvalho Odontologia"
+          >
+            <img
+              src="/logos/logo-red-transparente.png"
+              alt="Logo Carvalho Odontologia"
+              class="carvalho-header__logo"
+            />
+          </a>
+
+          <nav class="carvalho-header__nav" aria-label="Navegação principal">
+            <a href="#sobre" class="carvalho-header__nav-link">Sobre</a>
+            <a href="#especialidades" class="carvalho-header__nav-link"
+              >Especialidades</a
+            >
+            <a href="#tratamentos" class="carvalho-header__nav-link"
+              >Tratamentos</a
+            >
+            <a href="#depoimentos" class="carvalho-header__nav-link"
+              >Depoimentos</a
+            >
+            <a href="#contato" class="carvalho-header__nav-link">Contato</a>
+          </nav>
+
+          <a
+            href="https://wa.me/5515981708003"
+            class="carvalho-header__cta"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. HERO -->
+    <section class="carvalho-hero">
+      <div class="carvalho-hero__media">
+        <img
+          src="/image/familia-no-parque-2.png"
+          alt="Família reunida em momento de convivência"
+          class="carvalho-hero__bg"
+        />
+      </div>
+
+      <div class="carvalho-hero__content carvalho-container">
+        <p class="carvalho-hero__eyebrow">Carvalho Odontologia</p>
+
+        <h1 class="carvalho-hero__title">
+          Para viver os bons momentos de sorriso aberto.
+        </h1>
+
+        <p class="carvalho-hero__text">
+          A prioridade aqui é a clareza e agilidade,<br />
+          respeitando o tempo e a necessidade<br />
+          de cada paciente.
+        </p>
+
+        <div class="carvalho-hero__actions">
+          <a
+            href="https://wa.me/5515981708003"
+            class="carvalho-hero__btn carvalho-hero__btn--primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. MARQUEE -->
+    <section
+      class="carvalho-hero-strip"
+      aria-label="Diferenciais do consultório"
+    >
+      <div class="carvalho-hero-strip__fade carvalho-hero-strip__fade--left">
+      </div>
+      <div class="carvalho-hero-strip__fade carvalho-hero-strip__fade--right">
+      </div>
+
+      <div class="carvalho-hero-strip__marquee">
+        <div class="carvalho-hero-strip__track">
+          <span>Atendimento com hora marcada</span>
+          <span>Cuidado do início ao fim</span>
+          <span>Clareza em cada etapa</span>
+          <span>No Éden, em Sorocaba</span>
+          <span>Atendimento próximo e atencioso</span>
+          <span>Respeito pelo seu tempo</span>
+          <span>Acompanhamento com responsabilidade</span>
+
+          <span>Atendimento com hora marcada</span>
+          <span>Cuidado do início ao fim</span>
+          <span>Clareza em cada etapa</span>
+          <span>No Éden, em Sorocaba</span>
+          <span>Atendimento próximo e atencioso</span>
+          <span>Respeito pelo seu tempo</span>
+          <span>Acompanhamento com responsabilidade</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SOBRE -->
+    <section class="carvalho-about" id="sobre">
+      <div class="carvalho-container">
+        <div class="carvalho-about__header">
+          <span class="carvalho-about__eyebrow">Sobre</span>
+
+          <h2 class="carvalho-about__title">
+            Cuidado próximo, com clareza e respeito pelo seu tempo.
+          </h2>
+
+          <p class="carvalho-about__text">
+            Na Carvalho Odontologia, cada paciente é atendido com atenção,
+            responsabilidade e acompanhamento real, com foco em um cuidado de
+            qualidade do início ao fim.
+          </p>
+        </div>
+
+        <div class="carvalho-about__grid">
+          <article class="carvalho-about__card">
+            <h3 class="carvalho-about__card-title">Hora marcada</h3>
+            <p class="carvalho-about__card-text">
+              Mais organização e respeito pela sua rotina.
+            </p>
+          </article>
+
+          <article class="carvalho-about__card">
+            <h3 class="carvalho-about__card-title">Clareza no atendimento</h3>
+            <p class="carvalho-about__card-text">
+              Você entende cada etapa do cuidado com mais segurança.
+            </p>
+          </article>
+
+          <article class="carvalho-about__card">
+            <h3 class="carvalho-about__card-title">Acompanhamento contínuo</h3>
+            <p class="carvalho-about__card-text">
+              Cuidado que segue com responsabilidade do começo ao fim.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. ESPECIALIDADES -->
+    <section class="carvalho-specialties" id="especialidades">
+      <div class="carvalho-container">
+        <div class="carvalho-specialties__intro">
+          <div class="carvalho-specialties__content">
+            <span class="carvalho-specialties__eyebrow">Especialidades</span>
+
+            <h2 class="carvalho-specialties__title">
+              Atendimento com foco em reabilitação oral, estética e cuidado
+              contínuo.
+            </h2>
+
+            <p class="carvalho-specialties__text">
+              À frente da Carvalho Odontologia, Lucas Carvalho atua com atenção
+              especial em implantodontia, prótese e reabilitação oral, além de
+              atendimentos clínicos importantes para a saúde e manutenção do
+              sorriso.
+            </p>
+
+            <div class="carvalho-specialties__doctor">
+              <strong class="carvalho-specialties__doctor-name">
+                Lucas Carvalho
+              </strong>
+              <span class="carvalho-specialties__doctor-role">
+                Cirurgião-dentista<br />CRO 12345-SP
+              </span>
+            </div>
+          </div>
+
+          <div class="carvalho-specialties__media">
+            <img
+              src="/image/lucas-no-consultorio.png"
+              alt="Lucas Carvalho no consultório odontológico"
+              class="carvalho-specialties__image"
+            />
+          </div>
+        </div>
+
+        <div class="carvalho-specialties__grid">
+          <article class="carvalho-specialties__card">
+            <h3 class="carvalho-specialties__card-title">Implantodontia</h3>
+            <p class="carvalho-specialties__card-text">
+              Reposição dentária com foco em função, estabilidade e mais
+              segurança no dia a dia.
+            </p>
+          </article>
+
+          <article class="carvalho-specialties__card">
+            <h3 class="carvalho-specialties__card-title">Prótese dentária</h3>
+            <p class="carvalho-specialties__card-text">
+              Planejamento e reabilitação para devolver conforto, equilíbrio e
+              confiança ao sorrir.
+            </p>
+          </article>
+
+          <article class="carvalho-specialties__card">
+            <h3 class="carvalho-specialties__card-title">Dentística</h3>
+            <p class="carvalho-specialties__card-text">
+              Restaurações e cuidados voltados à recuperação da saúde e da
+              aparência dos dentes.
+            </p>
+          </article>
+
+          <article class="carvalho-specialties__card">
+            <h3 class="carvalho-specialties__card-title">
+              Limpeza e prevenção
+            </h3>
+            <p class="carvalho-specialties__card-text">
+              Acompanhamento clínico e cuidados preventivos para manter a saúde
+              bucal em dia.
+            </p>
+          </article>
+
+          <article class="carvalho-specialties__card">
+            <h3 class="carvalho-specialties__card-title">Facetas e estética</h3>
+            <p class="carvalho-specialties__card-text">
+              Tratamentos estéticos para harmonizar o sorriso com mais
+              naturalidade e equilíbrio.
+            </p>
+          </article>
+
+          <article class="carvalho-specialties__card">
+            <h3 class="carvalho-specialties__card-title">
+              Especialidades complementares
+            </h3>
+            <p class="carvalho-specialties__card-text">
+              O consultório conta com profissionais parceiros de confiança,
+              alinhados ao mesmo cuidado, respeito e responsabilidade.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTÓRIO E AMBIENTE -->
+    <section class="carvalho-office" id="consultorio">
+      <div class="carvalho-container">
+        <div class="carvalho-office__header">
+          <span class="carvalho-office__eyebrow">O consultório</span>
+
+          <h2 class="carvalho-office__title">
+            Um ambiente pensado para atender com conforto, organização e
+            tranquilidade.
+          </h2>
+
+          <p class="carvalho-office__text">
+            A Carvalho Odontologia oferece atendimento em um consultório
+            preparado para receber cada paciente com mais conforto, atenção e
+            cuidado em cada etapa.
+          </p>
+
+          <p class="carvalho-office__plans">
+            Atendimento particular e por convênios selecionados. Consulte pelo
+            WhatsApp os planos disponíveis no momento.
+          </p>
+
+          <a
+            href="https://wa.me/55SEUNUMEROAQUI"
+            class="carvalho-office__button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar planos pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="carvalho-office__gallery">
+          <img
+            src="/image/consultorio1.png"
+            alt="Recepção do consultório"
+            class="carvalho-office__image"
+          />
+          <img
+            src="/image/consultorio2.png"
+            alt="Ambiente interno do consultório"
+            class="carvalho-office__image"
+          />
+          <img
+            src="/image/esterilizacao.png"
+            alt="Sala de atendimento do consultório"
+            class="carvalho-office__image"
+          />
+          <img
+            src="/image/fachada.png"
+            alt="Outro ambiente do consultório"
+            class="carvalho-office__image"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- AVALIAÇÕES GOOGLE -->
+    <section class="carvalho-reviews" id="depoimentos">
+      <div class="carvalho-container">
+        <div class="carvalho-reviews__header">
+          <span class="carvalho-reviews__eyebrow">Depoimentos</span>
+
+          <h2 class="carvalho-reviews__title">
+            A experiência de quem já passou pelo consultório
+          </h2>
+
+          <p class="carvalho-reviews__text">
+            Atendimento próximo, cuidado em cada etapa e mais tranquilidade para
+            seguir o tratamento com confiança.
+          </p>
+
+          <div class="carvalho-reviews__summary">
+            <div class="carvalho-reviews__google">
+              <span class="carvalho-reviews__google-g">G</span>
+              <span class="carvalho-reviews__google-text">Google</span>
+            </div>
+
+            <div class="carvalho-reviews__rating">
+              <strong class="carvalho-reviews__score">5,0</strong>
+              <span class="carvalho-reviews__stars">★★★★★</span>
+              <span class="carvalho-reviews__count">Avaliações no Google</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="carvalho-reviews__grid">
+          <article class="carvalho-reviews__card">
+            <p class="carvalho-reviews__quote">
+              “Minha consulta com o Dr. Lucas foi muito tranquila, e o trabalho
+              foi excelente.”
+            </p>
+            <span class="carvalho-reviews__author">Gelmaina Ferreira</span>
+          </article>
+
+          <article class="carvalho-reviews__card">
+            <p class="carvalho-reviews__quote">
+              “Atendimento muito diferenciado, com contato direto com o doutor.
+              Foi uma das melhores experiências que já tive.”
+            </p>
+            <span class="carvalho-reviews__author">Joyce Ramos</span>
+          </article>
+
+          <article class="carvalho-reviews__card">
+            <p class="carvalho-reviews__quote">
+              “Atencioso e calmo, deixa o paciente tranquilo. Tirou todas as
+              dúvidas, indicando as melhores alternativas para o tratamento.
+              Recomendo.”
+            </p>
+            <span class="carvalho-reviews__author">Nara West</span>
+          </article>
+        </div>
+
+        <div class="carvalho-reviews__actions">
+          <a
+            href="https://www.google.com/search?q=dr.+lucas+eden+sorocaba&sca_esv=4383f7dd9720c753&sxsrf=ANbL-n7iyIIov2vGRVxFex2U5u4O_dnRPQ%3A1774022226241&ei=Um69abyyDoqf5OUP-Kbs-Ak&biw=1707&bih=811&ved=0ahUKEwi8o_nk666TAxWKD7kGHXgTG58Q4dUDCBE&uact=5&oq=dr.+lucas+eden+sorocaba&gs_lp=Egxnd3Mtd2l6LXNlcnAiF2RyLiBsdWNhcyBlZGVuIHNvcm9jYWJhMgUQIRigATIFECEYoAEyBRAhGKABSMAeUOYLWIMdcAF4AJABAJgBpQKgAaUOqgEDMi04uAEDyAEA-AEBmAIJoALWDsICCxAAGIAEGLADGKIEwgIIEAAYsAMY7wXCAgUQIRifBcICCBAAGAgYDRgewgIIEAAYogQYiQXCAggQABiABBiiBMICBRAAGO8FmAMAiAYBkAYFkgcFMS4wLjigB5YesgcDMi04uAfODsIHBTAuNS40yAccgAgA&sclient=gws-wiz-serp#lrd=0x94cf5f59b9db8e17:0x11f7619e39acd01c,1,,,,"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="carvalho-reviews__link"
+          >
+            Ver todas as avaliações no Google
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTATO -->
+    <section class="carvalho-contact" id="contato">
+      <div class="carvalho-container">
+        <div class="carvalho-contact__grid">
+          <div class="carvalho-contact__content">
+            <span class="carvalho-contact__eyebrow">Localização e contato</span>
+
+            <h2 class="carvalho-contact__title">
+              Atendimento próximo, com hora marcada, no Éden.
+            </h2>
+
+            <p class="carvalho-contact__text">
+              Entre em contato para tirar dúvidas, agendar sua avaliação e
+              confirmar tratamentos, convênios e horários de atendimento.
+            </p>
+
+            <ul class="carvalho-contact__list">
+              <li>Atendimento com hora marcada</li>
+              <li>Éden, em Sorocaba</li>
+              <li>Contato direto pelo WhatsApp</li>
+              <li>Consulte localização e disponibilidade</li>
+            </ul>
+          </div>
+
+          <div class="carvalho-contact__side">
+            <div class="carvalho-contact__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.080919634617!2d-47.419833424674216!3d-23.420841578896567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5f59b9db8e17%3A0x11f7619e39acd01c!2sDr%20Lucas%20Carvalho%20-%20Odontologia!5e1!3m2!1spt-BR!2sbr!4v1774037223828!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização da Carvalho Odontologia no Google Maps"
+              ></iframe>
+            </div>
+
+            <div class="carvalho-contact__actions">
+              <a
+                href="COLE_AQUI_O_LINK_DO_GOOGLE_MAPS"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="carvalho-contact__button carvalho-contact__button--secondary"
+              >
+                Ver no Google Maps
+              </a>
+
+              <a
+                href="https://wa.me/55SEUNUMEROAQUI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="carvalho-contact__button"
+              >
+                Agendar pelo WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="carvalho-footer">
+      <div class="carvalho-container">
+        <div class="carvalho-footer__grid">
+          <div class="carvalho-footer__brand">
+            <strong class="carvalho-footer__logo">Carvalho Odontologia</strong>
+            <p class="carvalho-footer__text">
+              Cuidado odontológico com atenção, clareza e respeito pelo seu
+              tempo, no Éden, em Sorocaba.
+            </p>
+          </div>
+
+          <nav class="carvalho-footer__nav" aria-label="Links do rodapé">
+            <span class="carvalho-footer__heading">Navegação</span>
+            <a href="#sobre" class="carvalho-footer__link">Sobre</a>
+            <a href="#especialidades" class="carvalho-footer__link"
+              >Especialidades</a
+            >
+            <a href="#depoimentos" class="carvalho-footer__link">Depoimentos</a>
+            <a href="#contato" class="carvalho-footer__link">Contato</a>
+          </nav>
+
+          <div class="carvalho-footer__contact">
+            <span class="carvalho-footer__heading">Contato</span>
+            <a
+              href="https://wa.me/55SEUNUMEROAQUI"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="carvalho-footer__link"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="COLE_AQUI_O_LINK_DO_GOOGLE_MAPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="carvalho-footer__link"
+            >
+              Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="carvalho-footer__bottom">
+          <p class="carvalho-footer__copy">
+            © 2026 Carvalho Odontologia. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- -----fechamento das seções -----  -->
+  </body>
+</html>
