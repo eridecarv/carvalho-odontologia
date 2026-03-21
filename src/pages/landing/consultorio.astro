@@ -8,10 +8,10 @@ import "./consultorio.css";
   1. Faixa superior / announcement
   2. Header
   3. Hero
-  4. marquee
+  4. Marquee
   5. Sobre
   6. Especialidades
-  7. Tratamentos
+  7. Consultório
   8. Depoimentos
   9. Contato
   10. Footer
@@ -28,7 +28,7 @@ import "./consultorio.css";
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="/logo-redonda-favicon.png" />
-    <title>Consultório</title>
+    <title>Carvalho Odontologia</title>
   </head>
 
   <body>
@@ -36,7 +36,7 @@ import "./consultorio.css";
     <section class="carvalho-announcement">
       <div class="carvalho-container">
         <p class="carvalho-announcement__text">
-          Cuidado e respeito, do início ao fim, aqui no Éden.
+          Atendimento odontológico no Éden/Sorocaba.
         </p>
       </div>
     </section>
@@ -59,15 +59,15 @@ import "./consultorio.css";
 
           <nav class="carvalho-header__nav" aria-label="Navegação principal">
             <a href="#sobre" class="carvalho-header__nav-link">Sobre</a>
-            <a href="#especialidades" class="carvalho-header__nav-link"
-              >Especialidades</a
-            >
-            <a href="#tratamentos" class="carvalho-header__nav-link"
-              >Tratamentos</a
-            >
-            <a href="#depoimentos" class="carvalho-header__nav-link"
-              >Depoimentos</a
-            >
+            <a href="#especialidades" class="carvalho-header__nav-link">
+              Especialidades
+            </a>
+            <a href="#consultorio" class="carvalho-header__nav-link">
+              Consultório
+            </a>
+            <a href="#depoimentos" class="carvalho-header__nav-link">
+              Depoimentos
+            </a>
             <a href="#contato" class="carvalho-header__nav-link">Contato</a>
           </nav>
 
@@ -77,7 +77,7 @@ import "./consultorio.css";
             target="_blank"
             rel="noopener noreferrer"
           >
-            Falar no WhatsApp
+           WhatsApp
           </a>
         </div>
       </div>
@@ -91,19 +91,20 @@ import "./consultorio.css";
           alt="Família reunida em momento de convivência"
           class="carvalho-hero__bg"
         />
+        <div class="carvalho-hero__overlay"></div>
       </div>
 
       <div class="carvalho-hero__content carvalho-container">
         <p class="carvalho-hero__eyebrow">Carvalho Odontologia</p>
 
-        <h1 class="carvalho-hero__title">
+        <h1 class="carvalho-hero__title reveal'">
           Para viver os bons momentos de sorriso aberto.
         </h1>
 
         <p class="carvalho-hero__text">
-          A prioridade aqui é a clareza e agilidade,<br />
+          Nossa prioridade é a clareza e agilidade,<br />
           respeitando o tempo e a necessidade<br />
-          de cada paciente.
+          dos nossos pacientes.
         </p>
 
         <div class="carvalho-hero__actions">
@@ -113,13 +114,13 @@ import "./consultorio.css";
             target="_blank"
             rel="noopener noreferrer"
           >
-            Falar no WhatsApp
+            Agende pelo WhatsApp
           </a>
         </div>
       </div>
     </section>
 
-    <!-- 3. MARQUEE -->
+    <!-- 4. MARQUEE -->
     <section
       class="carvalho-hero-strip"
       aria-label="Diferenciais do consultório"
@@ -131,84 +132,92 @@ import "./consultorio.css";
 
       <div class="carvalho-hero-strip__marquee">
         <div class="carvalho-hero-strip__track">
-          <span>Atendimento com hora marcada</span>
-          <span>Cuidado do início ao fim</span>
-          <span>Clareza em cada etapa</span>
-          <span>No Éden, em Sorocaba</span>
-          <span>Atendimento próximo e atencioso</span>
-          <span>Respeito pelo seu tempo</span>
-          <span>Acompanhamento com responsabilidade</span>
+          <span>Hora marcada</span>
+          <span>Implantes e próteses</span>
+          <span>Atendimento no Éden</span>
+          <span>Clareza no plano de tratamento</span>
+          <span>Contato direto pelo WhatsApp</span>
+          <span>Avaliação individual</span>
+          <span>Convênios selecionados</span>
 
-          <span>Atendimento com hora marcada</span>
-          <span>Cuidado do início ao fim</span>
-          <span>Clareza em cada etapa</span>
-          <span>No Éden, em Sorocaba</span>
-          <span>Atendimento próximo e atencioso</span>
-          <span>Respeito pelo seu tempo</span>
-          <span>Acompanhamento com responsabilidade</span>
+          <span>Hora marcada</span>
+          <span>Implantes e próteses</span>
+          <span>Atendimento no Éden</span>
+          <span>Clareza no plano de tratamento</span>
+          <span>Contato direto pelo WhatsApp</span>
+          <span>Avaliação individual</span>
+          <span>Convênios selecionados</span>
         </div>
       </div>
     </section>
 
-    <!-- 4. SOBRE -->
+    <!-- 5. SOBRE -->
     <section class="carvalho-about" id="sobre">
       <div class="carvalho-container">
-        <div class="carvalho-about__header">
+        <div class="carvalho-about__header reveal">
           <span class="carvalho-about__eyebrow">Sobre</span>
 
           <h2 class="carvalho-about__title">
-            Cuidado próximo, com clareza e respeito pelo seu tempo.
+            Odontologia com mais atenção, clareza e respeito ao seu tempo.
           </h2>
 
           <p class="carvalho-about__text">
-            Na Carvalho Odontologia, cada paciente é atendido com atenção,
-            responsabilidade e acompanhamento real, com foco em um cuidado de
-            qualidade do início ao fim.
+            Na Carvalho Odontologia, cada paciente é atendido com atenção real
+            às suas necessidades. O foco é oferecer um cuidado mais próximo, com
+            organização, explicações objetivas e segurança em cada etapa do
+            tratamento.
           </p>
         </div>
 
         <div class="carvalho-about__grid">
-          <article class="carvalho-about__card">
+          <article class="carvalho-about__card reveal">
             <h3 class="carvalho-about__card-title">Hora marcada</h3>
             <p class="carvalho-about__card-text">
-              Mais organização e respeito pela sua rotina.
+              Atendimento com mais organização, menos espera e respeito pela sua
+              rotina.
             </p>
           </article>
 
-          <article class="carvalho-about__card">
-            <h3 class="carvalho-about__card-title">Clareza no atendimento</h3>
+          <article class="carvalho-about__card reveal">
+            <h3 class="carvalho-about__card-title">
+              Plano de tratamento claro
+            </h3>
             <p class="carvalho-about__card-text">
-              Você entende cada etapa do cuidado com mais segurança.
+              Você entende o que será feito, quais são as opções e o que faz
+              mais sentido para o seu caso.
             </p>
           </article>
 
-          <article class="carvalho-about__card">
-            <h3 class="carvalho-about__card-title">Acompanhamento contínuo</h3>
+          <article class="carvalho-about__card reveal">
+            <h3 class="carvalho-about__card-title">
+              Acompanhamento de verdade
+            </h3>
             <p class="carvalho-about__card-text">
-              Cuidado que segue com responsabilidade do começo ao fim.
+              Do primeiro atendimento à continuidade do cuidado, com
+              responsabilidade em cada etapa.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- 5. ESPECIALIDADES -->
+    <!-- 6. ESPECIALIDADES -->
     <section class="carvalho-specialties" id="especialidades">
       <div class="carvalho-container">
         <div class="carvalho-specialties__intro">
           <div class="carvalho-specialties__content">
             <span class="carvalho-specialties__eyebrow">Especialidades</span>
 
-            <h2 class="carvalho-specialties__title">
-              Atendimento com foco em reabilitação oral, estética e cuidado
-              contínuo.
+            <h2 class="carvalho-specialties__title reveal">
+              Tratamentos odontológicos com foco em reabilitação, estética e
+              mais segurança para sorrir.
             </h2>
 
             <p class="carvalho-specialties__text">
-              À frente da Carvalho Odontologia, Lucas Carvalho atua com atenção
-              especial em implantodontia, prótese e reabilitação oral, além de
-              atendimentos clínicos importantes para a saúde e manutenção do
-              sorriso.
+              Lucas Carvalho, especialista em implantodontia, é o profissional à
+              frente da Carvalho Odontologia. Atua também na reabilitação oral e
+              prótese, além de atendimentos clínicos e estéticos importantes
+              para a saúde, manutenção e recuperação do sorriso.
             </p>
 
             <div class="carvalho-specialties__doctor">
@@ -216,7 +225,7 @@ import "./consultorio.css";
                 Lucas Carvalho
               </strong>
               <span class="carvalho-specialties__doctor-role">
-                Cirurgião-dentista<br />CRO 12345-SP
+                Cirurgião-dentista<br />CROSP 140332
               </span>
             </div>
           </div>
@@ -234,24 +243,24 @@ import "./consultorio.css";
           <article class="carvalho-specialties__card">
             <h3 class="carvalho-specialties__card-title">Implantodontia</h3>
             <p class="carvalho-specialties__card-text">
-              Reposição dentária com foco em função, estabilidade e mais
-              segurança no dia a dia.
+              Reposição dentária com foco em estabilidade, função mastigatória e
+              mais segurança no dia a dia.
             </p>
           </article>
 
           <article class="carvalho-specialties__card">
             <h3 class="carvalho-specialties__card-title">Prótese dentária</h3>
             <p class="carvalho-specialties__card-text">
-              Planejamento e reabilitação para devolver conforto, equilíbrio e
-              confiança ao sorrir.
+              Soluções planejadas para recuperar conforto, equilíbrio e
+              naturalidade ao sorrir e falar.
             </p>
           </article>
 
           <article class="carvalho-specialties__card">
             <h3 class="carvalho-specialties__card-title">Dentística</h3>
             <p class="carvalho-specialties__card-text">
-              Restaurações e cuidados voltados à recuperação da saúde e da
-              aparência dos dentes.
+              Restaurações e procedimentos voltados à recuperação da estrutura,
+              saúde e estética dos dentes.
             </p>
           </article>
 
@@ -260,7 +269,7 @@ import "./consultorio.css";
               Limpeza e prevenção
             </h3>
             <p class="carvalho-specialties__card-text">
-              Acompanhamento clínico e cuidados preventivos para manter a saúde
+              Cuidados preventivos e acompanhamento clínico para manter a saúde
               bucal em dia.
             </p>
           </article>
@@ -268,8 +277,8 @@ import "./consultorio.css";
           <article class="carvalho-specialties__card">
             <h3 class="carvalho-specialties__card-title">Facetas e estética</h3>
             <p class="carvalho-specialties__card-text">
-              Tratamentos estéticos para harmonizar o sorriso com mais
-              naturalidade e equilíbrio.
+              Tratamentos estéticos planejados para valorizar o sorriso com
+              equilíbrio e naturalidade.
             </p>
           </article>
 
@@ -278,38 +287,63 @@ import "./consultorio.css";
               Especialidades complementares
             </h3>
             <p class="carvalho-specialties__card-text">
-              O consultório conta com profissionais parceiros de confiança,
-              alinhados ao mesmo cuidado, respeito e responsabilidade.
+              Quando necessário, o consultório conta com profissionais parceiros
+              de confiança para complementar o atendimento.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CONSULTÓRIO E AMBIENTE -->
+    <!-- 7. CONSULTÓRIO E AMBIENTE -->
     <section class="carvalho-office" id="consultorio">
       <div class="carvalho-container">
         <div class="carvalho-office__header">
           <span class="carvalho-office__eyebrow">O consultório</span>
 
-          <h2 class="carvalho-office__title">
-            Um ambiente pensado para atender com conforto, organização e
+          <h2 class="carvalho-office__title reveal">
+            Um espaço pensado para atender com conforto, privacidade e
             tranquilidade.
           </h2>
 
           <p class="carvalho-office__text">
-            A Carvalho Odontologia oferece atendimento em um consultório
-            preparado para receber cada paciente com mais conforto, atenção e
-            cuidado em cada etapa.
+            O consultório foi preparado para oferecer uma experiência mais
+            prática e confortável, desde a chegada até o atendimento. Um
+            ambiente pensado para quem valoriza organização, atenção aos
+            detalhes e um cuidado mais próximo.
           </p>
 
           <p class="carvalho-office__plans">
             Atendimento particular e por convênios selecionados. Consulte pelo
-            WhatsApp os planos disponíveis no momento.
+            WhatsApp quais planos estão disponíveis no momento.
           </p>
+          <div class="carvalho-office__insurance">
+            <p class="carvalho-office__insurance-label">Convênios atendidos</p>
 
+            <div class="carvalho-office__insurance-logos reveal">
+              <img
+                src="/image/logo-ideal-odonto.png"
+                alt="Convênio Ideal Odonto"
+                class="carvalho-office__insurance-logo"
+              />
+              <img
+                src="/image/logo-odontolife.png"
+                alt="Convênio OdontoLife"
+                class="carvalho-office__insurance-logo"
+              />
+              <img
+                src="/image/logo-uniodonto.png"
+                alt="Convênio Uniodonto"
+                class="carvalho-office__insurance-logo"
+              />
+            </div>
+
+            <p class="carvalho-office__insurance-note">
+              Consulte pelo WhatsApp a cobertura e os atendimentos disponíveis.
+            </p>
+          </div>
           <a
-            href="https://wa.me/55SEUNUMEROAQUI"
+            href="https://wa.me/5515981708003"
             class="carvalho-office__button"
             target="_blank"
             rel="noopener noreferrer"
@@ -331,31 +365,31 @@ import "./consultorio.css";
           />
           <img
             src="/image/esterilizacao.png"
-            alt="Sala de atendimento do consultório"
+            alt="Sala de esterilização do consultório"
             class="carvalho-office__image"
           />
           <img
             src="/image/fachada.png"
-            alt="Outro ambiente do consultório"
+            alt="Fachada do consultório"
             class="carvalho-office__image"
           />
         </div>
       </div>
     </section>
 
-    <!-- AVALIAÇÕES GOOGLE -->
+    <!-- 8. AVALIAÇÕES GOOGLE -->
     <section class="carvalho-reviews" id="depoimentos">
       <div class="carvalho-container">
         <div class="carvalho-reviews__header">
           <span class="carvalho-reviews__eyebrow">Depoimentos</span>
 
-          <h2 class="carvalho-reviews__title">
+          <h2 class="carvalho-reviews__title reveal">
             A experiência de quem já passou pelo consultório
           </h2>
 
           <p class="carvalho-reviews__text">
-            Atendimento próximo, cuidado em cada etapa e mais tranquilidade para
-            seguir o tratamento com confiança.
+            Relatos de pacientes que destacam atenção no atendimento,
+            explicações claras e mais segurança durante o tratamento.
           </p>
 
           <div class="carvalho-reviews__summary">
@@ -421,26 +455,42 @@ import "./consultorio.css";
             <span class="carvalho-contact__eyebrow">Localização e contato</span>
 
             <h2 class="carvalho-contact__title">
-              Atendimento próximo, com hora marcada, no Éden.
+              Agende sua avaliação e tire suas dúvidas diretamente pelo
+              WhatsApp.
             </h2>
 
             <p class="carvalho-contact__text">
-              Entre em contato para tirar dúvidas, agendar sua avaliação e
-              confirmar tratamentos, convênios e horários de atendimento.
+              Entre em contato para agendar sua consulta, esclarecer dúvidas
+              sobre tratamentos e obter informações sobre convênios atendidos.
             </p>
 
-            <ul class="carvalho-contact__list">
-              <li>Atendimento com hora marcada</li>
-              <li>Éden, em Sorocaba</li>
-              <li>Contato direto pelo WhatsApp</li>
-              <li>Consulte localização e disponibilidade</li>
-            </ul>
+            <div class="carvalho-contact__info">
+              <p>
+                <strong>Endereço</strong><br />
+                R. Salvador Leite Marques, 420 - SL 05 - Éden, Sorocaba - SP, 18103-050
+              </p>
+
+              <p>
+                <strong>Referência</strong><br />
+                Galeria Centro Comercial Éden, próximo à esquina com a Rua João Mustafá
+              </p>
+
+              <p>
+                <strong>Horário de atendimento</strong><br />
+                Segunda a sexta, das 9h às 18h30, e sábado até 12h
+              </p>
+
+              <p>
+                <strong>Agendamento</strong><br />
+                Atendimento somente com hora marcada
+              </p>
+            </div>
           </div>
 
           <div class="carvalho-contact__side">
             <div class="carvalho-contact__map">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.080919634617!2d-47.419833424674216!3d-23.420841578896567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5f59b9db8e17%3A0x11f7619e39acd01c!2sDr%20Lucas%20Carvalho%20-%20Odontologia!5e1!3m2!1spt-BR!2sbr!4v1774037223828!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.080919634617!2d-47.419833424674216!3d-23.420841578896567!2m3!1f0!2f0!3f0!2m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf5f59b9db8e17%3A0x11f7619e39acd01c!2sDr%20Lucas%20Carvalho%20-%20Odontologia!5e1!3m2!1spt-BR!2sbr!4v1774037223828!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style="border:0;"
@@ -453,7 +503,7 @@ import "./consultorio.css";
 
             <div class="carvalho-contact__actions">
               <a
-                href="COLE_AQUI_O_LINK_DO_GOOGLE_MAPS"
+                href="https://maps.app.goo.gl/iSrf1LsjAH3wTQHW8"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="carvalho-contact__button carvalho-contact__button--secondary"
@@ -462,7 +512,7 @@ import "./consultorio.css";
               </a>
 
               <a
-                href="https://wa.me/55SEUNUMEROAQUI"
+                href="https://wa.me/5515981708003"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="carvalho-contact__button"
@@ -475,23 +525,27 @@ import "./consultorio.css";
       </div>
     </section>
 
+    <!-- 10. FOOTER -->
     <footer class="carvalho-footer">
       <div class="carvalho-container">
         <div class="carvalho-footer__grid">
           <div class="carvalho-footer__brand">
             <strong class="carvalho-footer__logo">Carvalho Odontologia</strong>
             <p class="carvalho-footer__text">
-              Cuidado odontológico com atenção, clareza e respeito pelo seu
-              tempo, no Éden, em Sorocaba.
+              Implantes, próteses, estética e atendimento odontológico com hora
+              marcada no Éden, em Sorocaba.
             </p>
           </div>
 
           <nav class="carvalho-footer__nav" aria-label="Links do rodapé">
             <span class="carvalho-footer__heading">Navegação</span>
             <a href="#sobre" class="carvalho-footer__link">Sobre</a>
-            <a href="#especialidades" class="carvalho-footer__link"
-              >Especialidades</a
-            >
+            <a href="#especialidades" class="carvalho-footer__link">
+              Especialidades
+            </a>
+            <a href="#consultorio" class="carvalho-footer__link">
+              Consultório
+            </a>
             <a href="#depoimentos" class="carvalho-footer__link">Depoimentos</a>
             <a href="#contato" class="carvalho-footer__link">Contato</a>
           </nav>
@@ -499,7 +553,7 @@ import "./consultorio.css";
           <div class="carvalho-footer__contact">
             <span class="carvalho-footer__heading">Contato</span>
             <a
-              href="https://wa.me/55SEUNUMEROAQUI"
+              href="https://wa.me/5515981708003"
               target="_blank"
               rel="noopener noreferrer"
               class="carvalho-footer__link"
@@ -507,7 +561,7 @@ import "./consultorio.css";
               WhatsApp
             </a>
             <a
-              href="COLE_AQUI_O_LINK_DO_GOOGLE_MAPS"
+              href="https://maps.app.goo.gl/iSrf1LsjAH3wTQHW8"
               target="_blank"
               rel="noopener noreferrer"
               class="carvalho-footer__link"
@@ -524,6 +578,24 @@ import "./consultorio.css";
         </div>
       </div>
     </footer>
-    <!-- -----fechamento das seções -----  -->
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.14,
+        },
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
