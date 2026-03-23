@@ -182,6 +182,13 @@ iframe {
 .carvalho-hero__media {
   position: absolute;
   inset: 0;
+  z-index: 0;
+}
+
+.carvalho-hero__media picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .carvalho-hero__bg {
@@ -276,20 +283,19 @@ iframe {
   transform: translateY(-1px);
 }
 
-
 @media (max-width: 640px) {
   .carvalho-hero__bg {
     object-position: 95% center;
   }
 
-.carvalho-hero__overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(18, 15, 14, 0.96) 0%,
-    rgba(18, 15, 14, 0.9) 42%,
-    rgba(18, 15, 14, 0.85) 100%
-  );
-}
+  .carvalho-hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 15, 14, 0.72) 0%,
+      rgba(18, 15, 14, 0.58) 42%,
+      rgba(18, 15, 14, 0.5) 100%
+    );
+  }
 
   .carvalho-hero__content {
     text-align: center;

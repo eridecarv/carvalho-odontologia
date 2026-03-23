@@ -77,27 +77,44 @@ import "./consultorio.css";
             target="_blank"
             rel="noopener noreferrer"
           >
-           WhatsApp
+            WhatsApp
           </a>
         </div>
       </div>
     </header>
 
     <!-- 3. HERO -->
+    <!-- 3. HERO -->
     <section class="carvalho-hero">
       <div class="carvalho-hero__media">
-        <img
-          src="/image/familia-no-parque-2.png"
-          alt="Família reunida em momento de convivência"
-          class="carvalho-hero__bg"
-        />
+        <picture>
+          <source
+            srcset="/image/familia-no-parque-mobileWebp.webp"
+            media="(max-width: 767px)"
+          />
+          <source
+            srcset="/image/familia-no-parque-desktopWebp.webp"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/image/familia-hero-desktop.webp"
+            alt="Família reunida em momento de convivência"
+            class="carvalho-hero__bg"
+            width="1600"
+            height="900"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
+
         <div class="carvalho-hero__overlay"></div>
       </div>
 
       <div class="carvalho-hero__content carvalho-container">
         <p class="carvalho-hero__eyebrow">Carvalho Odontologia</p>
 
-        <h1 class="carvalho-hero__title reveal'">
+        <h1 class="carvalho-hero__title reveal">
           Para viver os bons momentos de sorriso aberto.
         </h1>
 
