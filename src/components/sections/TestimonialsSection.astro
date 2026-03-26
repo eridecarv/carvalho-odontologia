@@ -1,0 +1,204 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import TestimonialCard from "../ui/cards/TestimonialCard.astro";
+---
+
+<section class="testimonials-section" id="depoimentos">
+  <div class="testimonials-section__container">
+    <SectionHeading
+      eyebrow="Depoimentos"
+      title="A experiência de quem já passou pelo consultório"
+      text="Relatos de pacientes que destacam atenção no atendimento, explicações claras e mais segurança durante o tratamento."
+      align="center"
+      titleWidth="20ch"
+      textWidth="58ch"
+    />
+
+    <div class="testimonials-section__summary">
+      <div class="testimonials-section__google" aria-label="Avaliações no Google">
+        <span class="testimonials-section__google-g">G</span>
+        <span class="testimonials-section__google-text">Google</span>
+      </div>
+
+      <div class="testimonials-section__rating">
+        <strong class="testimonials-section__score">5,0</strong>
+        <span class="testimonials-section__stars" aria-hidden="true">★★★★★</span>
+        <span class="testimonials-section__count">Avaliações no Google</span>
+      </div>
+    </div>
+
+    <div class="testimonials-section__grid">
+      <TestimonialCard
+        quote="Minha consulta com o Dr. Lucas foi muito tranquila, e o trabalho foi excelente."
+        name="Gelmaina Ferreira"
+      />
+
+      <TestimonialCard
+        quote="Atendimento muito diferenciado, com contato direto com o doutor. Foi uma das melhores experiências que já tive."
+        name="Joyce Ramos"
+      />
+
+      <TestimonialCard
+        quote="Atencioso e calmo, deixa o paciente tranquilo. Tirou todas as dúvidas, indicando as melhores alternativas para o tratamento. Recomendo."
+        name="Nara West"
+      />
+    </div>
+
+    <div class="testimonials-section__actions">
+      <a
+        href="https://www.google.com/search?q=dr.+lucas+eden+sorocaba&sca_esv=4383f7dd9720c753&sxsrf=ANbL-n7iyIIov2vGRVxFex2U5u4O_dnRPQ%3A1774022226241&ei=Um69abyyDoqf5OUP-Kbs-Ak&biw=1707&bih=811&ved=0ahUKEwi8o_nk666TAxWKD7kGHXgTG58Q4dUDCBE&uact=5&oq=dr.+lucas+eden+sorocaba&gs_lp=Egxnd3Mtd2l6LXNlcnAiF2RyLiBsdWNhcyBlZGVuIHNvcm9jYWJhMgUQIRigATIFECEYoAEyBRAhGKABSMAeUOYLWIMdcAF4AJABAJgBpQKgAaUOqgEDMi04uAEDyAEA-AEBmAIJoALWDsICCxAAGIAEGLADGKIEwgIIEAAYsAMY7wXCAgUQIRifBcICCBAAGAgYDRgewgIIEAAYogQYiQXCAggQABiABBiiBMICBRAAGO8FmAMAiAYBkAYFkgcFMS4wLjigB5YesgcDMi04uAfODsIHBTAuNS40yAccgAgA&sclient=gws-wiz-serp#lrd=0x94cf5f59b9db8e17:0x11f7619e39acd01c,1,,,,"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="testimonials-section__link"
+      >
+        Ver todas as avaliações no Google
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    padding: 104px 0;
+    background: var(--color-bg);
+  }
+
+  .testimonials-section__container {
+    width: min(var(--container-width), calc(100% - var(--container-padding)));
+    margin: 0 auto;
+  }
+
+  .testimonials-section__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: -4px 0 40px;
+    text-align: center;
+  }
+
+  .testimonials-section__google {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 18px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-pill);
+  }
+
+  .testimonials-section__google-g {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #4285f4;
+  }
+
+  .testimonials-section__google-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #3c4043;
+  }
+
+  .testimonials-section__rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .testimonials-section__score {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-text);
+  }
+
+  .testimonials-section__stars {
+    letter-spacing: 0.08em;
+    color: #d6a84e;
+    font-size: 0.96rem;
+  }
+
+  .testimonials-section__count {
+    font-size: 0.95rem;
+    color: var(--color-text-soft);
+  }
+
+  .testimonials-section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .testimonials-section__actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 34px;
+    text-align: center;
+  }
+
+  .testimonials-section__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .testimonials-section__link:hover {
+    opacity: 0.82;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 900px) {
+    .testimonials-section {
+      padding: 80px 0;
+    }
+
+    .testimonials-section__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .testimonials-section {
+      padding: 64px 0;
+    }
+
+    .testimonials-section__container {
+      width: min(100% - 32px, var(--container-width));
+    }
+
+    .testimonials-section__summary {
+      margin-bottom: 28px;
+    }
+
+    .testimonials-section__rating {
+      gap: 8px;
+    }
+
+    .testimonials-section__actions {
+      margin-top: 26px;
+    }
+
+    .testimonials-section__link {
+      text-align: center;
+    }
+  }
+</style>

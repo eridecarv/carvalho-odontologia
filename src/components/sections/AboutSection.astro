@@ -1,0 +1,76 @@
+---
+import SectionHeading from "../ui/SectionHeading.astro";
+import FeatureCard from "../ui/cards/FeatureCard.astro";
+---
+
+<section class="about-section" id="sobre">
+  <div class="about-section__container">
+    <SectionHeading
+      eyebrow="Sobre"
+      title="Odontologia com mais atenção, clareza e respeito ao seu tempo."
+      text="Na Carvalho Odontologia, cada paciente é atendido com atenção real às suas necessidades. O foco é oferecer um cuidado mais próximo, com organização, explicações objetivas e segurança em cada etapa do tratamento."
+      align="center"
+      titleWidth="18ch"
+      textWidth="68ch"
+    />
+
+    <div class="about-section__grid">
+      <FeatureCard
+        title="Hora marcada"
+        text="Atendimento com mais organização, menos espera e respeito pela sua rotina."
+      />
+
+      <FeatureCard
+        title="Clareza no tratamento"
+        text="Cada etapa é explicada de forma objetiva, para que você entenda o que está sendo feito e por quê."
+      />
+
+      <FeatureCard
+        title="Cuidado mais próximo"
+        text="Um atendimento mais humano, com escuta, atenção aos detalhes e acompanhamento de verdade."
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 104px 0;
+    background: var(--color-bg);
+  }
+
+  .about-section__container {
+    width: min(var(--container-width), calc(100% - var(--container-padding)));
+    margin: 0 auto;
+  }
+
+  .about-section__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .about-section {
+      padding: 80px 0;
+    }
+
+    .about-section__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .about-section {
+      padding: 64px 0;
+    }
+
+    .about-section__container {
+      width: min(100% - 32px, var(--container-width));
+    }
+
+    .about-section__grid {
+      gap: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,220 @@
+---
+import Button from "../ui/Button.astro";
+
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  desktopImageSrc?: string;
+  mobileImageSrc?: string;
+  fallbackImageSrc?: string;
+  imageAlt?: string;
+}
+
+const {
+  eyebrow = "Carvalho Odontologia",
+  title = "Para viver os bons momentos de sorriso aberto.",
+  text = "Nossa prioridade é a clareza e agilidade, respeitando o tempo e a necessidade dos nossos pacientes.",
+  ctaLabel = "Agende pelo WhatsApp",
+  ctaHref = "https://wa.me/5515981708003",
+  desktopImageSrc = "/image/familia-no-parque-desktopWebp.webp",
+  mobileImageSrc = "/image/familia-no-parque-mobileWebp.webp",
+  fallbackImageSrc = "/image/familia-hero-desktop.webp",
+  imageAlt = "Família reunida em momento de convivência",
+} = Astro.props;
+---
+
+<section class="hero-section">
+  <div class="hero-section__media">
+    <picture>
+      <source
+        srcset={mobileImageSrc}
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset={desktopImageSrc}
+        media="(min-width: 768px)"
+      />
+      <img
+        src={fallbackImageSrc}
+        alt={imageAlt}
+        class="hero-section__bg"
+        width="1600"
+        height="900"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+
+    <div class="hero-section__overlay"></div>
+  </div>
+
+  <div class="container hero-section__content">
+    <p class="hero-section__eyebrow">{eyebrow}</p>
+
+    <h1 class="hero-section__title">{title}</h1>
+
+    <p class="hero-section__text">{text}</p>
+
+    <div class="hero-section__actions">
+      <Button
+        href={ctaHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="light"
+      >
+        {ctaLabel}
+      </Button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #1f1a19;
+  }
+
+  .hero-section__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-section__media picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-section__bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-section__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(18, 15, 14, 0.78) 0%,
+      rgba(18, 15, 14, 0.62) 32%,
+      rgba(18, 15, 14, 0.3) 60%,
+      rgba(18, 15, 14, 0.1) 100%
+    );
+  }
+
+  .hero-section__content {
+    position: relative;
+    z-index: 1;
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .hero-section__eyebrow {
+    margin: 0 0 18px;
+    font-size: 0.88rem;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .hero-section__title {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(2.3rem, 4.2vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    font-weight: 800;
+    color: #ffffff;
+    text-wrap: balance;
+  }
+
+  .hero-section__text {
+    max-width: 620px;
+    margin: 24px 0 0;
+    font-size: 1.06rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .hero-section__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  :global(.hero-section .btn) {
+    min-height: 54px;
+    padding: 0 24px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  :global(.hero-section .btn--light) {
+    background: #ffffff;
+    color: #241d1c;
+    border: 1px solid #ffffff;
+  }
+
+  :global(.hero-section .btn--light:hover) {
+    background: #f3efec;
+    border-color: #f3efec;
+  }
+
+  @media (max-width: 640px) {
+    .hero-section__bg {
+      object-position: 95% center;
+    }
+
+    .hero-section__overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(18, 15, 14, 0.72) 0%,
+        rgba(18, 15, 14, 0.58) 42%,
+        rgba(18, 15, 14, 0.5) 100%
+      );
+    }
+
+    .hero-section__content {
+      text-align: center;
+    }
+
+    .hero-section__eyebrow,
+    .hero-section__title,
+    .hero-section__text {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .hero-section__title {
+      max-width: 11ch;
+    }
+
+    .hero-section__text {
+      max-width: 24ch;
+    }
+
+    .hero-section__actions {
+      justify-content: center;
+    }
+
+    :global(.hero-section .btn) {
+      width: 100%;
+    }
+  }
+</style>

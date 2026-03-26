@@ -1,0 +1,224 @@
+---
+interface FooterNavItem {
+  label: string;
+  href: string;
+}
+
+interface FooterContactItem {
+  label: string;
+  href?: string;
+  external?: boolean;
+}
+
+interface Props {
+  brandName?: string;
+  description?: string;
+  navItems?: FooterNavItem[];
+  contactItems?: FooterContactItem[];
+  copyrightName?: string;
+}
+
+const defaultNavItems: FooterNavItem[] = [
+  { label: "Sobre", href: "#sobre" },
+  { label: "Especialidades", href: "#especialidades" },
+  { label: "Consultório", href: "#consultorio" },
+  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Contato", href: "#contato" },
+];
+
+const defaultContactItems: FooterContactItem[] = [
+  {
+    label: "WhatsApp",
+    href: "https://wa.me/5515981708003",
+    external: true,
+  },
+  {
+    label: "R. Salvador Leite Marques, 420 - SL 05 - Éden, Sorocaba - SP.",
+  },
+  {
+    label: "Segunda a sexta, das 9h às 18h30, e sábado até 12h",
+  },
+];
+
+const {
+  brandName = "Carvalho Odontologia",
+  description = "Atendimento odontológico com clareza, cuidado e acompanhamento próximo no Éden, em Sorocaba.",
+  navItems = defaultNavItems,
+  contactItems = defaultContactItems,
+  copyrightName = "Carvalho Odontologia",
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer" id="rodape">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <h2 class="site-footer__title">{brandName}</h2>
+        <p class="site-footer__description">{description}</p>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">Navegação</h3>
+        <ul class="site-footer__list">
+          {
+            navItems.map((item) => (
+              <li>
+                <a href={item.href} class="site-footer__link">
+                  {item.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="site-footer__column">
+        <h3 class="site-footer__heading">Contato</h3>
+        <ul class="site-footer__list">
+          {
+            contactItems.map((item) => (
+              <li>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    class="site-footer__link"
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <span class="site-footer__text">{item.label}</span>
+                )}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">
+        © {currentYear} {copyrightName}. Todos os direitos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    padding: 72px 0 28px;
+    background: var(--color-primary);
+    color: var(--color-surface);
+  }
+
+  .site-footer__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(180px, 0.8fr) minmax(220px, 1fr);
+    gap: 40px;
+    padding-bottom: 32px;
+  }
+
+  .site-footer__brand {
+    max-width: 460px;
+  }
+
+  .site-footer__title {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  .site-footer__description {
+    margin-top: 14px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .site-footer__heading {
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .site-footer__list {
+    display: grid;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .site-footer__link,
+  .site-footer__text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.92);
+  }
+
+  .site-footer__link {
+    transition:
+      color 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  .site-footer__link:hover {
+    color: #ffffff;
+    opacity: 0.82;
+  }
+
+  .site-footer__bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .site-footer__copyright {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  @media (max-width: 980px) {
+    .site-footer {
+      padding: 64px 0 28px;
+    }
+
+    .site-footer__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px 24px;
+    }
+
+    .site-footer__brand {
+      grid-column: 1 / -1;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .site-footer {
+      padding: 56px 0 24px;
+    }
+
+    .site-footer__grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+      padding-bottom: 28px;
+    }
+
+    .site-footer__description,
+    .site-footer__link,
+    .site-footer__text {
+      font-size: 0.96rem;
+    }
+
+    .site-footer__copyright {
+      font-size: 0.88rem;
+    }
+  }
+</style>

@@ -1,19 +1,30 @@
 ---
-const title = "Odontologia Lucas Carvalho";
+import MainLayout from "../layouts/MainLayout.astro";
+import AboutSection from "../components/sections/AboutSection.astro";
+import SpecialtiesSection from "../components/sections/SpecialtiesSection.astro";
+import TestimonialsSection from "../components/sections/TestimonialsSection.astro";
+import ClinicSection from "../components/sections/ClinicSection.astro";
+import ContactSection from "../components/sections/ContactSection.astro";
+import HeroSection from "../components/sections/HeroSection.astro";
+import AnnouncementBar from "../components/layouts/AnnouncementBar.astro";
+import Header from "../components/layouts/Header.astro";
+import Footer from "../components/layouts/Footer.astro";
+
+
 ---
 
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{title}</title>
-  </head>
 
-  <body>
-    <h1>{title}</h1>
-    <p>Implantodontia em Sorocaba</p>
-
-    <a href="https://wa.me/5515920025570">
-      Agendar pelo WhatsApp
-    </a>
-  </body>
-</html>
+<MainLayout
+  title="Carvalho Odontologia"
+  description="Atendimento odontológico com clareza, cuidado e hora marcada no Éden, em Sorocaba."
+>
+  <AnnouncementBar />
+  <Header />
+  <HeroSection />
+  <AboutSection />
+  <SpecialtiesSection />
+  <ClinicSection />
+  <TestimonialsSection />
+  <ContactSection />
+  <Footer />
+</MainLayout>
