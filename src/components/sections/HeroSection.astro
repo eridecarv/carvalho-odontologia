@@ -9,7 +9,6 @@ interface Props {
   ctaHref?: string;
   desktopImageSrc?: string;
   mobileImageSrc?: string;
-  fallbackImageSrc?: string;
   imageAlt?: string;
 }
 
@@ -21,7 +20,6 @@ const {
   ctaHref = "https://wa.me/5515981708003",
   desktopImageSrc = "/image/familia-no-parque-desktopWebp.webp",
   mobileImageSrc = "/image/familia-no-parque-mobileWebp.webp",
-  fallbackImageSrc = "/image/familia-hero-desktop.webp",
   imageAlt = "Família reunida em momento de convivência",
 } = Astro.props;
 ---
@@ -38,7 +36,7 @@ const {
         media="(min-width: 768px)"
       />
       <img
-        src={fallbackImageSrc}
+        src={desktopImageSrc}
         alt={imageAlt}
         class="hero-section__bg"
         width="1600"
@@ -46,6 +44,7 @@ const {
         loading="eager"
         fetchpriority="high"
         decoding="async"
+        sizes="100vw"
       />
     </picture>
 
