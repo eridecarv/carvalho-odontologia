@@ -19,6 +19,19 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
+        <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://stupendous-muffin-49498c.netlify.app/logo-social.jpg" />
+
+    <!-- Twitter (opcional, mas bom ter) -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://stupendous-muffin-49498c.netlify.app/logo-social.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,5 +44,28 @@ const {
 
   <body>
     <slot />
+    <script is:inline>
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if (revealElements.length > 0) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.14,
+          },
+        );
+
+        revealElements.forEach((el) => {
+          observer.observe(el);
+        });
+      }
+    </script>
   </body>
 </html>
