@@ -19,14 +19,14 @@ const {
 
     <title>{title}</title>
     <meta name="description" content={description} />
-        <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://stupendous-muffin-49498c.netlify.app/logo-social-co.jpg" />
 
-    <!-- LinkedIn (O SEGREDO ESTÁ AQUI) -->
+    <!-- LinkedIn -->
     <!-- Adicione essas duas linhas abaixo da sua tag og:image -->
     <meta property="og:image:secure_url" content="https://stupendous-muffin-49498c.netlify.app/logo-social-co.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -49,6 +49,21 @@ const {
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="/logo-redonda-favicon.png" />
+    
+    <!-- ========== CSS DA ANIMAÇÃO REVEAL ========== -->
+    <style is:global>
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                    transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
   </head>
 
   <body>
